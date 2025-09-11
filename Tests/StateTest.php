@@ -4,6 +4,7 @@
 namespace Tests;
 
 use Behavioral\State\OrderContext;
+use Behavioral\State\StateEnum;
 use Behavioral\State\User;
 use PHPUnit\Framework\TestCase;
 
@@ -27,6 +28,20 @@ class StateTest extends TestCase
         $order->orderProceed();
         $order->orderProceed();
         $order->orderProceed();
-        $this->assertEquals('archived', $order->getState()->getState());
+        $order->orderProceed();
+        var_dump($order->getOrderLogs());
+        $this->assertEquals(StateEnum::ARCHIVED->value, $order->getState()->getState());
+    }
+
+    public function testCanMoveOrderFromCreatedToCancelled()
+    {
+        $user = new User('Tarek', 'Cairo', false);
+
+        $order = new OrderContext($user);
+        $order->orderProceed();
+        $order->orderProceed();
+        $order->orderProceed();
+        var_dump($order->getOrderLogs());
+        $this->assertEquals(StateEnum::CANCELLED->value, $order->getState()->getState());
     }
 }
