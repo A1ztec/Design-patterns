@@ -1,0 +1,29 @@
+{
+    "name": "tarek/design-patterns-course",
+    "description": "Code Exapmples For Design Patterns in php Course",
+    "authors": [
+        {
+            "name": "Tarek Mohamed",
+            "email": "A1ztec1@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Creational\\": "Creational/",
+            "Behavioral\\": "Behavioral/"
+        }
+    },
+    "autoload-dev": {
+    "psr-4": {
+        "Tests\\": "tests/"
+    },
+    
+    "scripts": {
+        "test": "phpunit"
+    }
+        
+    }
+}

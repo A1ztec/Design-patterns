@@ -1,0 +1,5 @@
+{
+  "php.executablePath": "C:\\Users\\tarek\\AppData\\Local\\Programs\\Herd\\php\\php-8.3.6\\php.exe",
+  "phpunit.phpExecutablePath": "C:\\Users\\tarek\\AppData\\Local\\Programs\\Herd\\php\\php-8.3.6\\php.exe",
+  "phpunit.phpunit": "vendor/bin/phpunit"
+}
