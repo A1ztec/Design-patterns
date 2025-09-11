@@ -6,7 +6,9 @@ namespace Behavioral\State;
 class OrderContext
 
 {
-    public function __construct(private array $orderLogs, private State $state, private User $user) {}
+    private array $orderLogs = [];
+
+    public function __construct(private User $user, private State $state = new CreatedState()) {}
 
     public function getState(): State
     {
@@ -14,7 +16,7 @@ class OrderContext
     }
 
 
-    public function orderProceed () 
+    public function orderProceed()
     {
         $this->state->setOrderContext($this);
         $this->state->proceed();

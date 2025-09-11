@@ -4,8 +4,8 @@ namespace Behavioral\State;
 
 abstract class State
 {
-    private StateEnum $state;
-    private OrderContext $orderContext;
+    protected StateEnum $state;
+    protected OrderContext $orderContext;
 
     public function setOrderContext(OrderContext $orderContext): void
     {
@@ -16,6 +16,11 @@ abstract class State
     public function getContext(): OrderContext
     {
         return $this->orderContext;
+    }
+
+    public function getState(): string
+    {
+        return $this->state->value;
     }
 
     abstract public function proceed(): void;

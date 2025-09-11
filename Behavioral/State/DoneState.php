@@ -1,10 +1,12 @@
-<?
+<?php
 
 namespace Behavioral\State;
 
+use Behavioral\State\ArchivedState;
+
 class DoneState extends State
 {
-    private StateEnum $state = StateEnum::DONE;
+    protected StateEnum $state = StateEnum::DONE;
 
     public function proceed(): void
     {

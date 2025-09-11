@@ -4,7 +4,7 @@ namespace Behavioral\State;
 
 class ArchivedState extends State
 {
-    private StateEnum $state = StateEnum::ARCHIVED;
+    protected StateEnum $state = StateEnum::ARCHIVED;
 
     public function proceed(): void
     {

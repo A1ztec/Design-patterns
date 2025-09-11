@@ -1,11 +1,11 @@
-<?
+<?php
 
 namespace Behavioral\State;
 
 
 class PaidState extends State
 {
-    private StateEnum $state = StateEnum::PAID;
+    protected StateEnum $state = StateEnum::PAID;
 
     public function proceed(): void
     {

@@ -1,6 +1,6 @@
 {
     "name": "tarek/design-patterns-course",
-    "description": "Code Exapmples For Design Patterns in php Course",
+    "description": "Code Examples For Design Patterns in php Course",
     "authors": [
         {
             "name": "Tarek Mohamed",
@@ -17,13 +17,11 @@
         }
     },
     "autoload-dev": {
-    "psr-4": {
-        "Tests\\": "tests/"
+        "psr-4": {
+            "Tests\\": "Tests/"
+        }
     },
-    
     "scripts": {
-        "test": "phpunit"
-    }
-        
+        "test": "php vendor\\bin\\phpunit --colors=always"
     }
 }

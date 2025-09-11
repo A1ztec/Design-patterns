@@ -3,9 +3,9 @@
 namespace Behavioral\State;
 
 
-class CollectedSate extends State
+class CollectedState extends State
 {
-    private StateEnum $state = StateEnum::COLLECTED;
+    protected StateEnum $state = StateEnum::COLLECTED;
 
     public function proceed(): void
     {

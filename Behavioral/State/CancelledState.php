@@ -4,7 +4,7 @@ namespace Behavioral\State;
 
 class CancelledState extends State
 {
-    private StateEnum $state = StateEnum::CANCELLED;
+    protected StateEnum $state = StateEnum::CANCELLED;
 
     public function proceed(): void
     {
