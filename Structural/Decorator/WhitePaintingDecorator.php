@@ -9,8 +9,8 @@ class WhitePaintingDecorator extends PaintingDecorator
 
     public function paint(Car $car): Car
     {
-        $car->setColor(self::COLOR);
         parent::paint($car);
+        $car->setColor(self::COLOR);
         return $car;
     }
 }

@@ -6,10 +6,10 @@ class BluePaintingDecorator extends PaintingDecorator
 {
     private const COLOR = 'Blue ';
 
-    public function PAINT(Car $car): Car
+    public function paint(Car $car): Car
     {
-        parent::paint($car);
         $car->setColor(self::COLOR);
+        parent::paint($car);
         return $car;
     }
 }

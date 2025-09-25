@@ -2,10 +2,10 @@
 
 namespace Structural\Decorator;
 
-class painting implements PaintingInterface
+class Painting implements PaintingInterface
 
 {
-    
+
     public function paint(Car $car): Car
     {
         $car->setColor('Red ');
